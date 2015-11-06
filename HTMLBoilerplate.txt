@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+//A bunch of this was taken from the HTML boilerplate standard and code.tutsplus.com
+
 <head>
 	<meta charset="utf-8">
 	<title>HTML5 boilerplate – all you really need…</title>
 	<link rel="stylesheet" href="css/style.css">
-	<!--[if IE]>
+	<!--[if IE]> // this fixes a lot of pesky Internet Explorer problems.
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
@@ -13,6 +15,48 @@
 <body id="home">
 
 	<h1>HTML5 boilerplate</h1>
+	
+	//Have to use this to make HTML5 elements render properly.
+	// The document.createElement(); is used to make IE behave with this block display
+	header, footer, article, section, nav, menu { 
+   	display: block;
+   	}
+	document.createElement("article");
+	document.createElement("footer");
+	document.createElement("header");
+	document.createElement("nav");
+	document.createElement("menu");
+	
+	//Use the header and footer tags instead of div with id types of header and footer
+	//Also note this refers to the container, not placement on a page
+	//Can use as many headers and footers as you want
+	<header> </header>
+	<footer> </footer>
+	
+	//Perfectly legitimate to use div in HTML5. 
+	<div></div>
+	
+	hgroup // This is obsolete. Don't use it. 
+	
+	<figure> /*Allows for image and caption*/
+    		<img src="path/to/image" alt="About image" />
+    		<figcaption>
+        	<p>This is an image of something interesting. </p>
+    	</figcaption>
+	</figure>
+	
+	// links and scripts don't need a type in HTML5. 
+	<link rel="stylesheet" href="path/to/stylesheet.css" />
+	<script src="path/to/script.js"></script>
+	
+	//Creates a type that only allows an email with valid structure.
+	//placeholder is the grayed out text in the text box that shows user what to enter
+	//Neither supported on every browswer, but no harm done.
+	<input name="email" type="email" placeholder="jeniferjost@me.com" />
+	
+	//The required attribute makes the input required
+	<input type="text" name="someInput" required>
+
 
 </body>
 
